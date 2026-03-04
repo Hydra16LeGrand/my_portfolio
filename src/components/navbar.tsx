@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useSpring, useMotionValueEvent } from "framer-motion";
 import { useTheme } from "next-themes";
 import { Sun, Moon, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -27,6 +27,18 @@ export default function Navbar() {
         restDelta: 0.001
     });
 
+    const [hidden, setHidden] = useState(false);
+
+    useMotionValueEvent(scrollYProgress, "change", (latest) => {
+        const previous = scrollYProgress.getPrevious();
+        if (latest > 0.05 && previous && latest > previous) {
+            setHidden(true);
+            setMobileOpen(false);
+        } else {
+            setHidden(false);
+        }
+    });
+
     useEffect(() => {
         setMounted(true);
         const onScroll = () => setScrolled(window.scrollY > 20);
@@ -47,10 +59,14 @@ export default function Navbar() {
 
     return (
         <motion.header
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+            variants={{
+                visible: { y: 0 },
+                hidden: { y: "-100%" },
+            }}
+            initial="visible"
+            animate={hidden ? "hidden" : "visible"}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+            className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${scrolled
                 ? "glass border-b border-border/50 shadow-lg shadow-black/5"
                 : "bg-transparent"
                 }`}

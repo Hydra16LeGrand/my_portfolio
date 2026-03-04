@@ -40,14 +40,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans antialiased noise`}>
+      <body className={`${inter.variable} overflow-x-hidden font-sans antialiased noise`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          <SmoothScroll>{children}</SmoothScroll>
+          <SmoothScroll>
+            <div className="relative flex min-h-screen flex-col overflow-x-hidden">
+              {children}
+            </div>
+          </SmoothScroll>
         </ThemeProvider>
       </body>
     </html>
