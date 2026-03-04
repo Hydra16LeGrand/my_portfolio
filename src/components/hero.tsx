@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowDown, Briefcase, Linkedin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import MagneticButton from "@/components/magnetic-button";
 import { fadeInUp, staggerContainer } from "@/lib/motion";
 
 export default function Hero() {
@@ -86,11 +87,11 @@ export default function Hero() {
                 >
                     <span className="text-white dark:text-white">Amara Baradji</span>
                     <br />
-                    <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
+                    <span className="text-shimmer">
                         Consultant ERP Odoo &amp; IA
                     </span>
                     <br />
-                    <span className="bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent">
+                    <span className="text-shimmer">
                         SaaS &bull; Automatisation &bull; Data
                     </span>
                 </motion.h1>
@@ -108,37 +109,41 @@ export default function Hero() {
                     variants={fadeInUp}
                     className="flex w-full flex-col items-stretch gap-3 sm:w-auto sm:flex-row sm:items-center sm:justify-center"
                 >
-                    <Button
-                        size="lg"
-                        asChild
-                        className="group relative overflow-hidden rounded-full bg-gradient-to-r from-[#0A66C2] to-blue-500 px-6 text-white shadow-lg shadow-blue-500/25 transition-all hover:shadow-xl hover:shadow-blue-500/30 sm:px-8"
-                    >
-                        <a
-                            href="https://www.linkedin.com/in/amara-baradji"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center gap-2"
+                    <MagneticButton className="w-full sm:w-auto" intensity={0.15}>
+                        <Button
+                            size="lg"
+                            asChild
+                            className="w-full group relative overflow-hidden rounded-full bg-gradient-to-r from-[#0A66C2] to-blue-500 px-6 text-white shadow-lg shadow-blue-500/25 transition-all hover:shadow-xl hover:shadow-blue-500/30 sm:px-8"
                         >
-                            <Linkedin className="size-4" />
-                            Voir mon profil LinkedIn
-                        </a>
-                    </Button>
-                    <Button
-                        size="lg"
-                        asChild
-                        variant="outline"
-                        className="rounded-full border-emerald-500/40 bg-emerald-500/10 px-6 text-emerald-400 backdrop-blur-sm hover:bg-emerald-500/20 hover:text-emerald-300 sm:px-8"
-                    >
-                        <a
-                            href="https://wa.me/2250556748529"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center gap-2"
+                            <a
+                                href="https://www.linkedin.com/in/amara-baradji"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center justify-center gap-2"
+                            >
+                                <Linkedin className="size-4" />
+                                Voir mon profil LinkedIn
+                            </a>
+                        </Button>
+                    </MagneticButton>
+                    <MagneticButton className="w-full sm:w-auto" intensity={0.15}>
+                        <Button
+                            size="lg"
+                            asChild
+                            variant="outline"
+                            className="w-full rounded-full border-emerald-500/40 bg-emerald-500/10 px-6 text-emerald-400 backdrop-blur-sm hover:bg-emerald-500/20 hover:text-emerald-300 sm:px-8"
                         >
-                            <MessageCircle className="size-4" />
-                            Me contacter sur WhatsApp
-                        </a>
-                    </Button>
+                            <a
+                                href="https://wa.me/2250556748529"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center justify-center gap-2"
+                            >
+                                <MessageCircle className="size-4" />
+                                Me contacter sur WhatsApp
+                            </a>
+                        </Button>
+                    </MagneticButton>
                 </motion.div>
 
                 {/* Scroll indicator */}

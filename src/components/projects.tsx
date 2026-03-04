@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Zap, Globe, Server, Gauge } from "lucide-react";
 import { fadeInUp, staggerContainer, scaleIn } from "@/lib/motion";
+import SpotlightCard from "@/components/spotlight-card";
 
 const projects = [
     {
@@ -81,7 +82,7 @@ export default function Projects() {
                             variants={scaleIn}
                             className="group relative"
                         >
-                            <div className="glow-border relative overflow-hidden rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-500 hover:bg-card/80">
+                            <SpotlightCard className="glow-border relative flex h-full flex-col overflow-hidden rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:bg-card/80">
                                 {/* Top gradient bar */}
                                 <div
                                     className={`h-1 w-full bg-gradient-to-r ${project.color}`}
@@ -151,11 +152,11 @@ export default function Projects() {
                                     <ExternalLink className="size-3" />
                                     Survoler pour les détails techniques
                                 </div>
-                            </div>
+                            </SpotlightCard>
                         </motion.div>
                     ))}
                 </motion.div>
             </div>
-        </section>
+        </section >
     );
 }

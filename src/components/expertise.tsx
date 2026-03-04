@@ -28,6 +28,7 @@ import {
     Settings2,
 } from "lucide-react";
 import { fadeInUp, staggerContainer, scaleIn } from "@/lib/motion";
+import SpotlightCard from "@/components/spotlight-card";
 
 const expertiseData = [
     {
@@ -138,42 +139,46 @@ export default function Expertise() {
                         <motion.div
                             key={item.title}
                             variants={scaleIn}
-                            className={`glow-border group relative overflow-hidden rounded-2xl border border-border/50 bg-card/50 p-6 backdrop-blur-sm transition-all duration-500 hover:bg-card/80 ${item.span}`}
+                            className={item.span}
                         >
-                            {/* Gradient accent */}
-                            <div
-                                className={`absolute -right-8 -top-8 size-32 rounded-full bg-gradient-to-br ${item.color} opacity-10 blur-2xl transition-opacity duration-500 group-hover:opacity-20`}
-                            />
-
-                            <div className="relative z-10">
-                                {/* Icon */}
+                            <SpotlightCard
+                                className="glow-border group relative h-full overflow-hidden rounded-2xl border border-border/50 bg-card/50 p-6 backdrop-blur-sm transition-all duration-500 hover:bg-card/80"
+                            >
+                                {/* Gradient accent */}
                                 <div
-                                    className={`mb-4 inline-flex rounded-xl bg-gradient-to-br ${item.color} p-2.5 text-white shadow-lg`}
-                                >
-                                    <item.icon className="size-5" />
+                                    className={`absolute -right-8 -top-8 size-32 rounded-full bg-gradient-to-br ${item.color} opacity-10 blur-2xl transition-opacity duration-500 group-hover:opacity-20`}
+                                />
+
+                                <div className="relative z-10">
+                                    {/* Icon */}
+                                    <div
+                                        className={`mb-4 inline-flex rounded-xl bg-gradient-to-br ${item.color} p-2.5 text-white shadow-lg`}
+                                    >
+                                        <item.icon className="size-5" />
+                                    </div>
+
+                                    {/* Title */}
+                                    <h3 className="mb-2 text-lg font-semibold">{item.title}</h3>
+
+                                    {/* Description */}
+                                    <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
+                                        {item.description}
+                                    </p>
+
+                                    {/* Tech tags */}
+                                    <div className="flex flex-wrap gap-2">
+                                        {item.techs.map((tech) => (
+                                            <span
+                                                key={tech.name}
+                                                className="inline-flex items-center gap-1.5 rounded-lg border border-border/50 bg-background/50 px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
+                                            >
+                                                <tech.icon className="size-3" />
+                                                {tech.name}
+                                            </span>
+                                        ))}
+                                    </div>
                                 </div>
-
-                                {/* Title */}
-                                <h3 className="mb-2 text-lg font-semibold">{item.title}</h3>
-
-                                {/* Description */}
-                                <p className="mb-5 text-sm leading-relaxed text-muted-foreground">
-                                    {item.description}
-                                </p>
-
-                                {/* Tech tags */}
-                                <div className="flex flex-wrap gap-2">
-                                    {item.techs.map((tech) => (
-                                        <span
-                                            key={tech.name}
-                                            className="inline-flex items-center gap-1.5 rounded-lg border border-border/50 bg-background/50 px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
-                                        >
-                                            <tech.icon className="size-3" />
-                                            {tech.name}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
+                            </SpotlightCard>
                         </motion.div>
                     ))}
                 </motion.div>

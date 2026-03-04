@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Briefcase, Users, Bot, Cog, Code2, TrendingUp } from "lucide-react";
-import { fadeInUp, staggerContainer, slideInLeft } from "@/lib/motion";
+import { fadeInUp, staggerContainer, slideInLeft, slideInRight } from "@/lib/motion";
 
 const experiences = [
     {
@@ -130,7 +130,11 @@ export default function Experience() {
                 {/* Timeline */}
                 <div className="relative">
                     {/* Vertical line — desktop only */}
-                    <div className="absolute left-1/2 top-0 hidden h-full w-px bg-gradient-to-b from-transparent via-border to-transparent md:block" />
+                    <motion.div
+                        className="absolute left-[calc(50%-1px)] top-0 hidden h-full w-[2px] bg-gradient-to-b from-transparent via-primary/50 to-transparent md:block"
+                        animate={{ opacity: [0.2, 0.6, 0.2] }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                    />
 
                     <motion.div
                         variants={staggerContainer}
@@ -142,7 +146,7 @@ export default function Experience() {
                         {experiences.map((exp, i) => (
                             <motion.div
                                 key={`${exp.role}-${exp.period}`}
-                                variants={slideInLeft}
+                                variants={i % 2 === 0 ? slideInLeft : slideInRight}
                                 className={`relative flex gap-6 md:gap-0 ${i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
                                     }`}
                             >

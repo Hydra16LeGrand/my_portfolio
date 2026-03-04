@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Mail, Linkedin, ArrowUpRight, Send, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import MagneticButton from "@/components/magnetic-button";
 import { fadeInUp, staggerContainer } from "@/lib/motion";
 
 export default function Contact() {
@@ -43,50 +44,56 @@ export default function Contact() {
                         variants={fadeInUp}
                         className="flex flex-col items-center justify-center gap-4 sm:flex-row"
                     >
-                        <Button
-                            asChild
-                            size="lg"
-                            className="group rounded-full bg-gradient-to-r from-primary to-purple-600 px-8 text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30"
-                        >
-                            <a href="mailto:baradjiamara17@gmail.com">
-                                <Mail className="mr-2 size-4" />
-                                Email
-                                <ArrowUpRight className="ml-1 size-3 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                            </a>
-                        </Button>
-
-                        <Button
-                            asChild
-                            size="lg"
-                            className="group rounded-full bg-gradient-to-r from-emerald-500 to-green-500 px-8 text-white shadow-lg shadow-emerald-500/25 transition-all hover:shadow-xl hover:shadow-emerald-500/30"
-                        >
-                            <a
-                                href="https://wa.me/2250556748529"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                        <MagneticButton className="w-full sm:w-auto" intensity={0.2}>
+                            <Button
+                                asChild
+                                size="lg"
+                                className="w-full group rounded-full bg-gradient-to-r from-primary to-purple-600 px-8 text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30"
                             >
-                                <MessageCircle className="mr-2 size-4" />
-                                WhatsApp
-                                <ArrowUpRight className="ml-1 size-3 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                            </a>
-                        </Button>
+                                <a href="mailto:baradjiamara17@gmail.com">
+                                    <Mail className="mr-2 size-4" />
+                                    Email
+                                    <ArrowUpRight className="ml-1 size-3 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                                </a>
+                            </Button>
+                        </MagneticButton>
 
-                        <Button
-                            asChild
-                            variant="outline"
-                            size="lg"
-                            className="group rounded-full border-border/60 px-8 backdrop-blur-sm"
-                        >
-                            <a
-                                href="https://www.linkedin.com/in/amara-baradji/"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                        <MagneticButton className="w-full sm:w-auto" intensity={0.2}>
+                            <Button
+                                asChild
+                                size="lg"
+                                className="w-full group rounded-full bg-gradient-to-r from-emerald-500 to-green-500 px-8 text-white shadow-lg shadow-emerald-500/25 transition-all hover:shadow-xl hover:shadow-emerald-500/30"
                             >
-                                <Linkedin className="mr-2 size-4" />
-                                LinkedIn
-                                <ArrowUpRight className="ml-1 size-3 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                            </a>
-                        </Button>
+                                <a
+                                    href="https://wa.me/2250556748529"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <MessageCircle className="mr-2 size-4" />
+                                    WhatsApp
+                                    <ArrowUpRight className="ml-1 size-3 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                                </a>
+                            </Button>
+                        </MagneticButton>
+
+                        <MagneticButton className="w-full sm:w-auto" intensity={0.2}>
+                            <Button
+                                asChild
+                                variant="outline"
+                                size="lg"
+                                className="w-full group rounded-full border-border/60 px-8 backdrop-blur-sm"
+                            >
+                                <a
+                                    href="https://www.linkedin.com/in/amara-baradji/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <Linkedin className="mr-2 size-4 text-[#0A66C2]" />
+                                    LinkedIn
+                                    <ArrowUpRight className="ml-1 size-3 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                                </a>
+                            </Button>
+                        </MagneticButton>
                     </motion.div>
 
                     {/* Decorative element */}

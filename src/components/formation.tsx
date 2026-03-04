@@ -14,6 +14,7 @@ import {
     Database,
 } from "lucide-react";
 import { fadeInUp, staggerContainer, scaleIn } from "@/lib/motion";
+import SpotlightCard from "@/components/spotlight-card";
 
 const certifications = [
     {
@@ -125,47 +126,50 @@ export default function Formation() {
                             <motion.div
                                 key={cert.title}
                                 variants={scaleIn}
-                                className="glow-border group relative overflow-hidden rounded-2xl border border-border/50 bg-card/50 p-5 backdrop-blur-sm transition-all duration-500 hover:bg-card/80"
                             >
-                                {/* Gradient accent */}
-                                <div
-                                    className={`absolute -right-6 -top-6 size-24 rounded-full bg-gradient-to-br ${cert.color} opacity-10 blur-2xl transition-opacity duration-500 group-hover:opacity-20`}
-                                />
-
-                                <div className="relative z-10 flex h-full flex-col">
-                                    {/* Icon */}
+                                <SpotlightCard
+                                    className="glow-border group relative h-full overflow-hidden rounded-2xl border border-border/50 bg-card/50 p-5 backdrop-blur-sm transition-all duration-500 hover:bg-card/80"
+                                >
+                                    {/* Gradient accent */}
                                     <div
-                                        className={`mb-4 inline-flex rounded-xl bg-gradient-to-br ${cert.color} p-2.5 text-white shadow-lg`}
-                                    >
-                                        <cert.icon className="size-5" />
-                                    </div>
+                                        className={`absolute -right-6 -top-6 size-24 rounded-full bg-gradient-to-br ${cert.color} opacity-10 blur-2xl transition-opacity duration-500 group-hover:opacity-20`}
+                                    />
 
-                                    {/* Content */}
-                                    <h4 className="mb-1 text-sm font-semibold leading-snug">
-                                        {cert.title}
-                                    </h4>
-                                    <p className="mb-1 text-xs text-muted-foreground">
-                                        {cert.issuer}
-                                    </p>
-                                    {cert.date && (
-                                        <p className="mb-3 text-xs text-muted-foreground/60">
-                                            {cert.date}
-                                        </p>
-                                    )}
-
-                                    {/* Spacer */}
-                                    <div className="mt-auto pt-3">
-                                        <a
-                                            href={cert.pdf}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-1.5 rounded-lg border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs font-medium text-primary transition-colors hover:bg-primary/10"
+                                    <div className="relative z-10 flex h-full flex-col">
+                                        {/* Icon */}
+                                        <div
+                                            className={`mb-4 inline-flex rounded-xl bg-gradient-to-br ${cert.color} p-2.5 text-white shadow-lg`}
                                         >
-                                            <Download className="size-3" />
-                                            Voir le certificat
-                                        </a>
+                                            <cert.icon className="size-5" />
+                                        </div>
+
+                                        {/* Content */}
+                                        <h4 className="mb-1 text-sm font-semibold leading-snug">
+                                            {cert.title}
+                                        </h4>
+                                        <p className="mb-1 text-xs text-muted-foreground">
+                                            {cert.issuer}
+                                        </p>
+                                        {cert.date && (
+                                            <p className="mb-3 text-xs text-muted-foreground/60">
+                                                {cert.date}
+                                            </p>
+                                        )}
+
+                                        {/* Spacer */}
+                                        <div className="mt-auto pt-3">
+                                            <a
+                                                href={cert.pdf}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-1.5 rounded-lg border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs font-medium text-primary transition-colors hover:bg-primary/10"
+                                            >
+                                                <Download className="size-3" />
+                                                Voir le certificat
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
+                                </SpotlightCard>
                             </motion.div>
                         ))}
                     </div>
