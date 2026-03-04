@@ -14,7 +14,7 @@ const projects = [
             "Auto-scaling GPU basé sur la charge",
             "Routage intelligent des requêtes d'inférence",
             "Réduction de 40% des coûts d'infrastructure",
-            "Latence P99 < 200ms en production",
+            "Latence faible en production",
         ],
         techs: ["VLLM", "Runpod", "Docker", "Python", "FastAPI"],
         icon: Zap,
@@ -25,14 +25,13 @@ const projects = [
         title: "Adaptation de LLM aux Dialectes Locaux",
         category: "NLP • Fine-tuning",
         description:
-            "Fine-tuning de Llama 3 pour la compréhension des langues locales avec optimisation pour faible latence. Modèle adapté aux contextes linguistiques spécifiques.",
+            "Fine-tuning de Llama 3 pour la compréhension d'une langue locale avec optimisation pour faible latence. Modèle adapté aux contextes linguistiques spécifiques.",
         techDetails: [
             "Fine-tuning LoRA/QLoRA sur Llama 3",
             "Dataset curé de dialectes locaux",
             "Optimisation quantification INT4/INT8",
-            "Déploiement edge avec latence < 100ms",
         ],
-        techs: ["Llama 3", "LoRA", "PyTorch", "HuggingFace", "GGUF"],
+        techs: ["Llama 3", "LoRA", "HuggingFace", "Fine-tuning"],
         icon: Globe,
         color: "from-violet-500 to-purple-600",
         gradient: "from-violet-500/10 to-purple-600/10",
@@ -113,8 +112,8 @@ export default function Projects() {
                                         {project.description}
                                     </p>
 
-                                    {/* Technical details — revealed on hover */}
-                                    <div className="mb-5 max-h-0 overflow-hidden transition-all duration-500 group-hover:max-h-48">
+                                    {/* Technical details — always visible on mobile, hover on desktop */}
+                                    <div className="mb-5 max-h-48 overflow-hidden transition-all duration-500 md:max-h-0 md:group-hover:max-h-48">
                                         <div className="rounded-xl border border-border/30 bg-background/50 p-4">
                                             <div className="mb-2 flex items-center gap-2 text-xs font-medium text-primary">
                                                 <Server className="size-3" />
@@ -147,8 +146,8 @@ export default function Projects() {
                                     </div>
                                 </div>
 
-                                {/* Hover hint */}
-                                <div className="flex items-center justify-center gap-2 border-t border-border/30 px-6 py-3 text-xs text-muted-foreground opacity-60 transition-opacity group-hover:opacity-100">
+                                {/* Hover hint — desktop only */}
+                                <div className="hidden items-center justify-center gap-2 border-t border-border/30 px-6 py-3 text-xs text-muted-foreground opacity-60 transition-opacity group-hover:opacity-100 md:flex">
                                     <ExternalLink className="size-3" />
                                     Survoler pour les détails techniques
                                 </div>

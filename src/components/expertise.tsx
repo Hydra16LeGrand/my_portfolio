@@ -11,47 +11,92 @@ import {
     Layers,
     Workflow,
     HardDrive,
+    Code2,
+    TestTube2,
+    Globe,
+    Bot,
+    Mic,
+    Eye,
+    Zap,
+    Settings,
+    Link,
+    BarChart2,
+    RefreshCw,
+    Cloud,
+    Terminal,
+    Package,
+    Settings2,
 } from "lucide-react";
 import { fadeInUp, staggerContainer, scaleIn } from "@/lib/motion";
 
 const expertiseData = [
     {
-        title: "ERP & Backend",
+        title: "ERP & Gestion d'Entreprise",
         description:
-            "Architecture et développement d'écosystèmes Odoo complexes avec optimisation des performances à grande échelle.",
+            "Je conçois et déploie des systèmes de gestion sur mesure (ERP) qui centralisent vos opérations : ventes, comptabilité, stocks, RH — le tout dans un seul outil, fiable et scalable.",
         icon: Database,
         color: "from-blue-500 to-cyan-400",
         techs: [
-            { name: "Odoo V15-V19", icon: Layers },
-            { name: "Python", icon: Server },
-            { name: "PostgreSQL Tuning", icon: HardDrive },
-        ],
-        span: "md:col-span-2 md:row-span-2",
-    },
-    {
-        title: "IA Stack",
-        description:
-            "Déploiement et optimisation de modèles d'IA générative, du fine-tuning à l'inférence en production.",
-        icon: Brain,
-        color: "from-purple-500 to-pink-500",
-        techs: [
-            { name: "VLLM", icon: Cpu },
-            { name: "Runpod", icon: Server },
-            { name: "RAG Agents", icon: Workflow },
-            { name: "Fine-tuning LLM", icon: GitBranch },
+            { name: "Odoo V15 à V19", icon: Layers },
+            { name: "Hébergement cloud (Odoo.sh)", icon: Cloud },
+            { name: "Hébergement dédié", icon: Server },
+            { name: "Édition Enterprise", icon: Package },
+            { name: "Édition Community (open source)", icon: Package },
+            { name: "Développement Python", icon: Code2 },
+            { name: "Base de données PostgreSQL", icon: HardDrive },
+            { name: "Interfaces web sur mesure", icon: Globe },
+            { name: "Connecteurs & Intégrations tierces", icon: Link },
+            { name: "Tests automatisés", icon: TestTube2 },
         ],
         span: "md:col-span-2",
     },
     {
-        title: "Ops & Data",
+        title: "Intelligence Artificielle",
         description:
-            "Orchestration de pipelines de données et automatisation des déploiements pour des environnements critiques.",
+            "J'intègre l'IA dans vos processus métiers : génération de documents, lecture automatique de fichiers, assistants intelligents — des solutions concrètes qui font gagner du temps.",
+        icon: Brain,
+        color: "from-purple-500 to-pink-500",
+        techs: [
+            { name: "Modèles IA (Gemini, OpenAI, Azure)", icon: Cpu },
+            { name: "Agents IA & Chatbots", icon: Bot },
+            { name: "Recherche intelligente (RAG)", icon: Zap },
+            { name: "Lecture & Extraction de documents (OCR)", icon: Eye },
+            { name: "Voix vers texte / Texte vers voix", icon: Mic },
+            { name: "Modèles IA open source", icon: Server },
+            { name: "Personnalisation de modèles (Fine-tuning)", icon: Settings },
+            { name: "LangChain", icon: GitBranch },
+        ],
+        span: "md:col-span-2",
+    },
+    {
+        title: "Infrastructure & Déploiement",
+        description:
+            "Je m'assure que vos applications sont robustes, sécurisées et disponibles en permanence : mise en production, mises à jour sans interruption, surveillance continue.",
         icon: Container,
         color: "from-emerald-500 to-teal-400",
         techs: [
-            { name: "Docker", icon: Container },
-            { name: "CI/CD", icon: GitBranch },
-            { name: "Pipelines ETL", icon: Workflow },
+            { name: "Conteneurisation (Docker)", icon: Container },
+            { name: "Déploiement continu (CI/CD)", icon: RefreshCw },
+            { name: "Pipelines de données", icon: Workflow },
+            { name: "Base de données PostgreSQL", icon: HardDrive },
+            { name: "Serveurs Linux", icon: Terminal },
+            { name: "Automatisation système (n8n)", icon: GitBranch },
+            { name: "Serveur web & proxy (Nginx)", icon: Globe },
+        ],
+        span: "md:col-span-2",
+    },
+    {
+        title: "Automatisation Métier",
+        description:
+            "Je cartographie vos processus et les automatise : suppression des tâches manuelles répétitives, synchronisation entre vos outils, tableaux de bord en temps réel.",
+        icon: Settings2,
+        color: "from-orange-500 to-amber-400",
+        techs: [
+            { name: "Automatisation no-code (n8n, Make)", icon: Workflow },
+            { name: "Connexion entre applications (API)", icon: Link },
+            { name: "Intégrations Odoo", icon: Database },
+            { name: "Tableaux de bord & Reporting", icon: BarChart2 },
+            { name: "Assistants IA métier", icon: Bot },
         ],
         span: "md:col-span-2",
     },
@@ -72,13 +117,13 @@ export default function Expertise() {
                         variants={fadeInUp}
                         className="mb-3 text-sm font-medium uppercase tracking-widest text-primary"
                     >
-                        Stack Technique
+                        Ce que je fais
                     </motion.p>
                     <motion.h2
                         variants={fadeInUp}
                         className="text-3xl font-bold tracking-tight sm:text-4xl"
                     >
-                        Expertise
+                        Mes domaines d&apos;expertise
                     </motion.h2>
                 </motion.div>
 
@@ -87,7 +132,7 @@ export default function Expertise() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-50px" }}
-                    className="grid gap-4 md:grid-cols-4 md:grid-rows-2"
+                    className="grid gap-4 md:grid-cols-4"
                 >
                     {expertiseData.map((item) => (
                         <motion.div

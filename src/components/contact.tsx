@@ -48,7 +48,7 @@ export default function Contact() {
                             size="lg"
                             className="group rounded-full bg-gradient-to-r from-primary to-purple-600 px-8 text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30"
                         >
-                            <a href="mailto:amara.baradji@outlook.com">
+                            <a href="mailto:baradjiamara17@gmail.com">
                                 <Mail className="mr-2 size-4" />
                                 Email
                                 <ArrowUpRight className="ml-1 size-3 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />

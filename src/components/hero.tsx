@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowDown, CircuitBoard } from "lucide-react";
+import { ArrowDown, Briefcase, Linkedin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fadeInUp, staggerContainer } from "@/lib/motion";
 
@@ -66,13 +66,17 @@ export default function Hero() {
                     </div>
                 </motion.div>
 
-                {/* Badge */}
+                {/* Badge disponibilité */}
                 <motion.div
                     variants={fadeInUp}
-                    className="mb-8 inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/50 px-4 py-2 text-sm text-muted-foreground backdrop-blur-sm"
+                    className="mb-8 inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3 py-2 text-xs text-emerald-400 backdrop-blur-sm sm:px-4 sm:text-sm"
                 >
-                    <CircuitBoard className="size-4 text-primary" />
-                    <span>Senior Tech Lead • Architecte Solution</span>
+                    <span className="relative flex size-2 shrink-0">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                        <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
+                    </span>
+                    <span>Disponible immédiatement &bull; Portage salarial</span>
+                    <Briefcase className="size-3.5 shrink-0 sm:size-4" />
                 </motion.div>
 
                 {/* Title */}
@@ -83,11 +87,11 @@ export default function Hero() {
                     <span className="text-white dark:text-white">Amara Baradji</span>
                     <br />
                     <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
-                        Expert technico-fonctionnel ERP Odoo
+                        Consultant ERP Odoo &amp; IA
                     </span>
                     <br />
                     <span className="bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent">
-                        Architecte IA et Data
+                        SaaS &bull; Automatisation &bull; Data
                     </span>
                 </motion.h1>
 
@@ -96,32 +100,44 @@ export default function Hero() {
                     variants={fadeInUp}
                     className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground sm:text-xl"
                 >
-                    Je conçois des écosystèmes ERP intelligents et des infrastructures
-                    d&apos;IA haute performance.
+                    Senior Tech Lead — déploiement ERP, intégration IA, création de SaaS. Intervenant en portage salarial sur toute mission technique ou fonctionnelle.
                 </motion.p>
 
                 {/* CTA */}
                 <motion.div
                     variants={fadeInUp}
-                    className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
+                    className="flex w-full flex-col items-stretch gap-3 sm:w-auto sm:flex-row sm:items-center sm:justify-center"
                 >
                     <Button
                         size="lg"
-                        onClick={() => scrollTo("#projects")}
-                        className="group relative overflow-hidden rounded-full bg-gradient-to-r from-primary to-purple-600 px-8 text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30"
+                        asChild
+                        className="group relative overflow-hidden rounded-full bg-gradient-to-r from-[#0A66C2] to-blue-500 px-6 text-white shadow-lg shadow-blue-500/25 transition-all hover:shadow-xl hover:shadow-blue-500/30 sm:px-8"
                     >
-                        <span className="relative z-10 flex items-center gap-2">
-                            Découvrir mes projets
-                            <ArrowDown className="size-4 transition-transform group-hover:translate-y-0.5" />
-                        </span>
+                        <a
+                            href="https://www.linkedin.com/in/amara-baradji"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center gap-2"
+                        >
+                            <Linkedin className="size-4" />
+                            Voir mon profil LinkedIn
+                        </a>
                     </Button>
                     <Button
-                        variant="outline"
                         size="lg"
-                        onClick={() => scrollTo("#contact")}
-                        className="rounded-full border-border/60 px-8 backdrop-blur-sm"
+                        asChild
+                        variant="outline"
+                        className="rounded-full border-emerald-500/40 bg-emerald-500/10 px-6 text-emerald-400 backdrop-blur-sm hover:bg-emerald-500/20 hover:text-emerald-300 sm:px-8"
                     >
-                        Me contacter
+                        <a
+                            href="https://wa.me/2250556748529"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center gap-2"
+                        >
+                            <MessageCircle className="size-4" />
+                            Me contacter sur WhatsApp
+                        </a>
                     </Button>
                 </motion.div>
 
