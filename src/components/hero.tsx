@@ -28,6 +28,16 @@ export default function Hero() {
                 <div className="animate-orb-2 absolute bottom-1/4 right-1/4 size-80 rounded-full bg-purple-500/10 blur-3xl will-change-transform" />
             </div>
 
+            {/* Decorative shapes */}
+            {/* Code brackets */}
+            <svg className="deco deco-float-1 left-[8%] top-[18%] size-10 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" /></svg>
+            {/* Sparkle */}
+            <svg className="deco deco-float-2 right-[10%] top-[25%] size-8 text-purple-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.5 9.5L24 12l-9.5 2.5L12 24l-2.5-9.5L0 12l9.5-2.5z" /></svg>
+            {/* Neural node */}
+            <svg className="deco deco-float-3 bottom-[20%] left-[12%] size-9 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="3" /><circle cx="4" cy="4" r="1.5" /><circle cx="20" cy="4" r="1.5" /><circle cx="4" cy="20" r="1.5" /><circle cx="20" cy="20" r="1.5" /><line x1="9.5" y1="9.5" x2="5.5" y2="5.5" /><line x1="14.5" y1="9.5" x2="18.5" y2="5.5" /><line x1="9.5" y1="14.5" x2="5.5" y2="18.5" /><line x1="14.5" y1="14.5" x2="18.5" y2="18.5" /></svg>
+            {/* Small diamond */}
+            <svg className="deco deco-float-1 bottom-[30%] right-[8%] size-6 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l10 10-10 10L2 12z" /></svg>
+
             <motion.div
                 variants={staggerContainer}
                 initial="hidden"

@@ -34,6 +34,14 @@ export default function Contact() {
                 <div className="absolute bottom-0 left-1/3 size-96 rounded-full bg-primary/5 blur-3xl" />
             </div>
 
+            {/* Decorative shapes */}
+            {/* Envelope */}
+            <svg className="deco deco-float-1 right-[6%] top-[12%] size-9 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="M22 4L12 13 2 4" /></svg>
+            {/* Chat bubble */}
+            <svg className="deco deco-float-2 left-[5%] top-[30%] size-8 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" /></svg>
+            {/* Heart */}
+            <svg className="deco deco-float-3 right-[10%] bottom-[25%] size-6 text-rose-400" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" /></svg>
+
             <div className="relative mx-auto max-w-5xl">
                 <motion.div
                     variants={staggerContainer}

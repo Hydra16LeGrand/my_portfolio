@@ -89,6 +89,14 @@ export default function Experience() {
                 <div className="absolute right-0 top-1/4 size-96 rounded-full bg-primary/5 blur-3xl" />
             </div>
 
+            {/* Decorative shapes */}
+            {/* Briefcase */}
+            <svg className="deco deco-float-1 right-[5%] top-[10%] size-9 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" /></svg>
+            {/* Upward arrow */}
+            <svg className="deco deco-float-2 left-[4%] bottom-[25%] size-8 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 19V5M5 12l7-7 7 7" /></svg>
+            {/* Star */}
+            <svg className="deco deco-float-3 right-[8%] bottom-[40%] size-7 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14 2 9.27l6.91-1.01z" /></svg>
+
             <div className="relative mx-auto max-w-4xl">
                 <motion.div
                     variants={staggerContainer}

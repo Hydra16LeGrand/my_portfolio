@@ -80,11 +80,19 @@ export default function Projects() {
     const activeProject = projects[active];
 
     return (
-        <section id="projects" className="relative px-6 py-24 sm:py-32">
+        <section id="projects" className="pattern-circuit relative px-6 py-24 sm:py-32">
             <div className="pointer-events-none absolute inset-0">
                 <div className="absolute left-0 top-1/3 size-80 rounded-full bg-purple-500/5 blur-3xl" />
                 <div className="absolute bottom-1/4 right-0 size-96 rounded-full bg-primary/5 blur-3xl" />
             </div>
+
+            {/* Decorative shapes */}
+            {/* Terminal */}
+            <svg className="deco deco-float-1 left-[6%] top-[15%] size-9 text-violet-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="M6 10l4 4-4 4M12 18h6" /></svg>
+            {/* CPU chip */}
+            <svg className="deco deco-float-3 right-[5%] top-[35%] size-8 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="6" y="6" width="12" height="12" rx="1" /><path d="M9 1v5M15 1v5M9 18v5M15 18v5M1 9h5M1 15h5M18 9h5M18 15h5" /></svg>
+            {/* Rocket */}
+            <svg className="deco deco-float-2 left-[8%] bottom-[20%] size-7 text-orange-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09zM12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z" /><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /></svg>
 
             <div className="relative mx-auto max-w-6xl">
                 <motion.div
@@ -123,14 +131,14 @@ export default function Projects() {
                                 key={project.id}
                                 onClick={() => setActive(i)}
                                 className={`group flex min-w-[200px] items-center gap-4 rounded-xl border px-4 py-3.5 text-left transition-all duration-300 lg:min-w-0 ${active === i
-                                        ? "border-primary/30 bg-primary/5 shadow-lg shadow-primary/5"
-                                        : "border-border/50 bg-card/30 hover:border-border hover:bg-card/50"
+                                    ? "border-primary/30 bg-primary/5 shadow-lg shadow-primary/5"
+                                    : "border-border/50 bg-card/30 hover:border-border hover:bg-card/50"
                                     }`}
                             >
                                 <span
                                     className={`text-2xl font-black tracking-tighter transition-colors duration-300 ${active === i
-                                            ? "bg-gradient-to-br bg-clip-text text-transparent " + project.color
-                                            : "text-muted-foreground/30"
+                                        ? "bg-gradient-to-br bg-clip-text text-transparent " + project.color
+                                        : "text-muted-foreground/30"
                                         }`}
                                 >
                                     {project.number}
@@ -155,8 +163,8 @@ export default function Projects() {
                                 </div>
                                 <div
                                     className={`ml-auto hidden size-1.5 shrink-0 rounded-full transition-all duration-300 lg:block ${active === i
-                                            ? `bg-gradient-to-br ${project.color} shadow-sm`
-                                            : "bg-transparent"
+                                        ? `bg-gradient-to-br ${project.color} shadow-sm`
+                                        : "bg-transparent"
                                         }`}
                                 />
                             </button>

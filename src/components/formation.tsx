@@ -86,6 +86,13 @@ export default function Formation() {
     return (
         <section id="formation" className="relative px-6 py-24 sm:py-32">
             <div className="mx-auto max-w-6xl">
+                {/* Decorative shapes */}
+                {/* Graduation cap */}
+                <svg className="deco deco-float-1 right-[5%] top-[8%] size-9 text-purple-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M22 10l-10-5L2 10l10 5 10-5zM6 12v5c0 2 3 3 6 3s6-1 6-3v-5" /></svg>
+                {/* Book */}
+                <svg className="deco deco-float-2 left-[4%] top-[30%] size-8 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2zM22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" /></svg>
+                {/* Certificate/ribbon */}
+                <svg className="deco deco-float-3 right-[8%] bottom-[15%] size-7 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="8" r="6" /><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" /></svg>
                 <motion.div
                     variants={staggerContainer}
                     initial="hidden"

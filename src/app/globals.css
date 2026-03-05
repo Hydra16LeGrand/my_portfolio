@@ -129,9 +129,42 @@
     overflow-x: hidden;
   }
 
+  /* Subtle dot grid — tech/AI feel */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background-image:
+      radial-gradient(circle, currentColor 0.5px, transparent 0.5px);
+    background-size: 32px 32px;
+    opacity: 0.06;
+  }
+
   html {
     scroll-behavior: smooth;
   }
+}
+
+/* ── Decorative circuit pattern ── */
+.pattern-circuit {
+  position: relative;
+}
+
+.pattern-circuit::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.07;
+  background-image:
+    linear-gradient(90deg, currentColor 0.5px, transparent 0.5px),
+    linear-gradient(0deg, currentColor 0.5px, transparent 0.5px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 10%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 10%, transparent 70%);
 }
 
 /* ── Mesh gradient backgrounds ── */
@@ -269,4 +302,62 @@
 
 .animate-orb-2 {
   animation: orb-float-2 25s linear infinite;
+}
+
+/* ── Decorative shape floats ── */
+@keyframes float-slow {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(6deg);
+  }
+}
+
+@keyframes float-mid {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(-4deg);
+  }
+}
+
+@keyframes float-fast {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(3deg);
+  }
+}
+
+.deco {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.06;
+  will-change: transform;
+}
+
+.deco-float-1 {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.deco-float-2 {
+  animation: float-mid 6s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
+.deco-float-3 {
+  animation: float-fast 7s ease-in-out infinite;
+  animation-delay: -4s;
 }

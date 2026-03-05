@@ -17,7 +17,7 @@ export default function CallToAction() {
     };
 
     return (
-        <section className="relative px-6 py-16 sm:py-20">
+        <section className="pattern-circuit relative px-6 py-16 sm:py-20">
             <div className="relative mx-auto max-w-4xl">
                 <motion.div
                     variants={staggerContainer}

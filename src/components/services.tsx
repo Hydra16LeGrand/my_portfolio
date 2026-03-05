@@ -65,12 +65,20 @@ const services = [
 
 export default function Services() {
     return (
-        <section id="services" className="relative px-6 py-24 sm:py-32">
+        <section id="services" className="pattern-circuit relative px-6 py-24 sm:py-32">
             {/* Background */}
             <div className="pointer-events-none absolute inset-0">
                 <div className="absolute right-0 top-1/4 size-96 rounded-full bg-primary/5 blur-3xl" />
                 <div className="absolute bottom-0 left-1/4 size-80 rounded-full bg-purple-500/5 blur-3xl" />
             </div>
+
+            {/* Decorative shapes */}
+            {/* Bot face */}
+            <svg className="deco deco-float-2 right-[6%] top-[12%] size-10 text-violet-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="4" y="8" width="16" height="12" rx="2" /><circle cx="9" cy="14" r="1.5" fill="currentColor" /><circle cx="15" cy="14" r="1.5" fill="currentColor" /><line x1="12" y1="4" x2="12" y2="8" /><circle cx="12" cy="3" r="1" fill="currentColor" /></svg>
+            {/* Lightbulb */}
+            <svg className="deco deco-float-3 left-[5%] top-[40%] size-8 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M9 18h6M10 22h4M12 2a7 7 0 014 12.7V17a1 1 0 01-1 1h-6a1 1 0 01-1-1v-2.3A7 7 0 0112 2z" /></svg>
+            {/* Gear */}
+            <svg className="deco deco-float-1 bottom-[15%] right-[10%] size-9 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" /></svg>
 
             <div className="relative mx-auto max-w-6xl">
                 <motion.div
