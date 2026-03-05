@@ -22,24 +22,10 @@ export default function Hero() {
             {/* Mesh gradient background */}
             <div className="mesh-gradient pointer-events-none absolute inset-0" />
 
-            {/* Animated orbs */}
+            {/* Animated orbs — pure CSS for GPU performance */}
             <div className="pointer-events-none absolute inset-0">
-                <motion.div
-                    animate={{
-                        x: [0, 30, -20, 0],
-                        y: [0, -25, 15, 0],
-                    }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    className="absolute left-1/4 top-1/4 size-96 rounded-full bg-primary/10 blur-3xl"
-                />
-                <motion.div
-                    animate={{
-                        x: [0, -40, 20, 0],
-                        y: [0, 20, -30, 0],
-                    }}
-                    transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                    className="absolute bottom-1/4 right-1/4 size-80 rounded-full bg-purple-500/10 blur-3xl"
-                />
+                <div className="animate-orb-1 absolute left-1/4 top-1/4 size-96 rounded-full bg-primary/10 blur-3xl will-change-transform" />
+                <div className="animate-orb-2 absolute bottom-1/4 right-1/4 size-80 rounded-full bg-purple-500/10 blur-3xl will-change-transform" />
             </div>
 
             <motion.div
