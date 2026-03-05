@@ -10,6 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://amara-baradji.vercel.app"),
   title: "Amara Baradji — Consultant ERP Odoo & IA",
   description:
     "Consultant ERP Odoo & IA. 5+ ans d'expérience en déploiement ERP, intégration IA, création de SaaS et automatisation. Disponible en portage salarial.",
@@ -32,6 +33,14 @@ export const metadata: Metadata = {
     description:
       "5+ ans en déploiement ERP Odoo, intégration IA et création de SaaS. Disponible en portage salarial.",
     type: "website",
+    siteName: "Amara Baradji Portfolio",
+    locale: "fr_FR",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amara Baradji — Consultant ERP Odoo & IA",
+    description:
+      "5+ ans en déploiement ERP Odoo, intégration IA et création de SaaS.",
   },
 };
 
