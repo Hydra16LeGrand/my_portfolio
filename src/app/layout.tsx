@@ -35,12 +35,21 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Amara Baradji Portfolio",
     locale: "fr_FR",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Amara Baradji — Consultant ERP Odoo & IA",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Amara Baradji — Consultant ERP Odoo & IA",
     description:
       "5+ ans en déploiement ERP Odoo, intégration IA et création de SaaS.",
+    images: ["/og-image.png"],
   },
 };
 
