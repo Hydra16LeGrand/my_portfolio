@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Amara Baradji — Architecte Odoo & Expert IA",
+  title: "Amara Baradji — Consultant ERP Odoo & IA",
   description:
-    "Portfolio professionnel d'Amara Baradji. Architecte Expert Odoo, spécialiste IA, Tech Lead senior. Conception d'écosystèmes ERP intelligents et d'infrastructures d'IA haute performance.",
+    "Consultant ERP Odoo & IA. 5+ ans d'expérience en déploiement ERP, intégration IA, création de SaaS et automatisation. Disponible en portage salarial.",
   keywords: [
     "Odoo",
     "ERP",
@@ -20,15 +20,17 @@ export const metadata: Metadata = {
     "Intelligence Artificielle",
     "Python",
     "Tech Lead",
-    "Architecture Logicielle",
+    "Consultant",
+    "SaaS",
+    "Portage salarial",
     "LLM",
     "RAG",
   ],
   authors: [{ name: "Amara Baradji" }],
   openGraph: {
-    title: "Amara Baradji — Architecte Odoo & Expert IA",
+    title: "Amara Baradji — Consultant ERP Odoo & IA",
     description:
-      "Conception d'écosystèmes ERP intelligents et d'infrastructures d'IA haute performance.",
+      "5+ ans en déploiement ERP Odoo, intégration IA et création de SaaS. Disponible en portage salarial.",
     type: "website",
   },
 };

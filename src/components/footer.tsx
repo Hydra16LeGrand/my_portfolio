@@ -1,6 +1,6 @@
 "use client";
 
-import { Linkedin, Mail, Heart } from "lucide-react";
+import { Linkedin, Mail, Heart, MessageCircle } from "lucide-react";
 
 export default function Footer() {
     return (
@@ -13,11 +13,20 @@ export default function Footer() {
 
                 <div className="flex items-center gap-4">
                     <a
-                        href="mailto:amara.baradji@outlook.com"
+                        href="mailto:baradjiamara17@gmail.com"
                         className="text-muted-foreground transition-colors hover:text-foreground"
                         aria-label="Email"
                     >
                         <Mail className="size-4" />
+                    </a>
+                    <a
+                        href="https://wa.me/2250556748529"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground transition-colors hover:text-foreground"
+                        aria-label="WhatsApp"
+                    >
+                        <MessageCircle className="size-4" />
                     </a>
                     <a
                         href="https://www.linkedin.com/in/amara-baradji/"

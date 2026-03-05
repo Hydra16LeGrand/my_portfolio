@@ -101,7 +101,7 @@ export default function Hero() {
                     variants={fadeInUp}
                     className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground sm:text-xl"
                 >
-                    Senior Tech Lead — déploiement ERP, intégration IA, création de SaaS. Intervenant en portage salarial sur toute mission technique ou fonctionnelle.
+                    5+ ans d&apos;expérience en déploiement ERP Odoo, intégration IA et création de SaaS. Disponible immédiatement en portage salarial pour vos missions techniques ou fonctionnelles.
                 </motion.p>
 
                 {/* CTA */}

@@ -7,9 +7,10 @@ import { Sun, Moon, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-    { label: "Expertise", href: "#expertise" },
+    { label: "Services", href: "#services" },
     { label: "Expériences", href: "#experience" },
     { label: "Projets", href: "#projects" },
+    { label: "Compétences", href: "#expertise" },
     { label: "Formation", href: "#formation" },
     { label: "Contact", href: "#contact" },
 ];

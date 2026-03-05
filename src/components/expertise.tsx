@@ -34,7 +34,7 @@ const expertiseData = [
     {
         title: "ERP & Gestion d'Entreprise",
         description:
-            "Je conçois et déploie des systèmes de gestion sur mesure (ERP) qui centralisent vos opérations : ventes, comptabilité, stocks, RH — le tout dans un seul outil, fiable et scalable.",
+            "Je conçois et déploie des systèmes de gestion sur mesure (ERP) qui centralisent vos opérations : achats, ventes, stocks, fabrication, comptabilité — le tout dans un seul outil, fiable et scalable.",
         icon: Database,
         color: "from-blue-500 to-cyan-400",
         techs: [
@@ -65,7 +65,7 @@ const expertiseData = [
             { name: "Voix vers texte / Texte vers voix", icon: Mic },
             { name: "Modèles IA open source", icon: Server },
             { name: "Personnalisation de modèles (Fine-tuning)", icon: Settings },
-            { name: "LangChain", icon: GitBranch },
+            { name: "N8N", icon: GitBranch },
         ],
         span: "md:col-span-2",
     },
@@ -118,13 +118,13 @@ export default function Expertise() {
                         variants={fadeInUp}
                         className="mb-3 text-sm font-medium uppercase tracking-widest text-primary"
                     >
-                        Ce que je fais
+                        Compétences
                     </motion.p>
                     <motion.h2
                         variants={fadeInUp}
                         className="text-3xl font-bold tracking-tight sm:text-4xl"
                     >
-                        Mes domaines d&apos;expertise
+                        Compétences Techniques
                     </motion.h2>
                 </motion.div>
 

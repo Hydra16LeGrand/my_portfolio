@@ -211,35 +211,21 @@
 
 /* ── WOW Effects ── */
 .text-shimmer {
-  background: linear-gradient(110deg,
+  background: linear-gradient(135deg,
       var(--color-primary) 0%,
-      var(--color-purple-400) 20%,
-      #fff 40%,
-      var(--color-purple-400) 60%,
-      var(--color-primary) 100%);
-  background-size: 400% auto;
+      var(--color-purple-400) 50%,
+      var(--color-blue-400) 100%);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: shimmer 4s linear infinite;
 }
 
 .dark .text-shimmer {
-  background: linear-gradient(110deg,
+  background: linear-gradient(135deg,
       var(--color-blue-400) 0%,
-      var(--color-purple-400) 20%,
-      #fff 40%,
-      var(--color-purple-400) 60%,
-      var(--color-blue-400) 100%);
-  background-size: 400% auto;
+      var(--color-purple-400) 50%,
+      var(--color-primary) 100%);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: shimmer 4s linear infinite;
-}
-
-@keyframes shimmer {
-  to {
-    background-position: 400% center;
-  }
 }
