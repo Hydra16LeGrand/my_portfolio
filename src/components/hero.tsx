@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowDown, CircuitBoard } from "lucide-react";
+import { ArrowDown, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fadeInUp, staggerContainer } from "@/lib/motion";
 
@@ -50,9 +50,21 @@ export default function Hero() {
                 {/* Avatar photo */}
                 <motion.div variants={fadeInUp} className="mb-8 flex justify-center">
                     <div className="relative">
+                        {/* Outer glow effect */}
+                        <div className="absolute -inset-3 rounded-full bg-gradient-to-br from-primary via-purple-500 to-blue-500 opacity-40 blur-lg" />
+                        <motion.div
+                            animate={{ rotate: 360 }}
+                            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                            className="absolute -inset-2 rounded-full opacity-60"
+                            style={{
+                                background: "conic-gradient(from 0deg, transparent, rgba(139, 92, 246, 0.4), rgba(59, 130, 246, 0.4), transparent)",
+                            }}
+                        />
+
                         {/* Gradient ring */}
-                        <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-primary via-purple-500 to-blue-500 opacity-75 blur-sm" />
-                        <div className="relative size-32 overflow-hidden rounded-full border-2 border-background/50 sm:size-36">
+                        <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-primary via-purple-500 to-blue-500 opacity-90 blur-sm" />
+
+                        <div className="relative size-32 overflow-hidden rounded-full border-2 border-background/50 shadow-2xl sm:size-36">
                             <Image
                                 src="/images/amara-baradji.jpg"
                                 alt="Amara Baradji"
@@ -61,8 +73,10 @@ export default function Hero() {
                                 priority
                             />
                         </div>
-                        {/* Online status dot */}
+
+                        {/* Online status dot with pulse */}
                         <div className="absolute bottom-2 right-2 size-4 rounded-full border-2 border-background bg-emerald-500 shadow-lg shadow-emerald-500/50" />
+                        <div className="absolute bottom-2 right-2 size-4 animate-ping rounded-full border-2 border-background bg-emerald-500 opacity-75" />
                     </div>
                 </motion.div>
 
@@ -71,8 +85,8 @@ export default function Hero() {
                     variants={fadeInUp}
                     className="mb-8 inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/50 px-4 py-2 text-sm text-muted-foreground backdrop-blur-sm"
                 >
-                    <CircuitBoard className="size-4 text-primary" />
-                    <span>Senior Tech Lead • Architecte Solution</span>
+                    <MapPin className="size-4 text-primary" />
+                    <span>Disponible pour missions · Relocation possible</span>
                 </motion.div>
 
                 {/* Title */}
@@ -83,11 +97,11 @@ export default function Hero() {
                     <span className="text-white dark:text-white">Amara Baradji</span>
                     <br />
                     <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
-                        Expert technico-fonctionnel ERP Odoo
+                        Développeur & Consultant Odoo
                     </span>
-                    <br />
-                    <span className="bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent">
-                        Architecte IA et Data
+                    <span className="mx-2 text-muted-foreground">|</span>
+                    <span className="text-2xl font-medium text-muted-foreground sm:text-3xl md:text-4xl">
+                        Automatisation & IA
                     </span>
                 </motion.h1>
 
@@ -96,8 +110,9 @@ export default function Hero() {
                     variants={fadeInUp}
                     className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground sm:text-xl"
                 >
-                    Je conçois des écosystèmes ERP intelligents et des infrastructures
-                    d&apos;IA haute performance.
+                    5 ans d&apos;expérience sur Odoo (V14 → V19), certifié Odoo 19.
+                    Je développe des modules sur mesure, automatise les processus métier
+                    et intègre des solutions IA concrètes dans les systèmes existants.
                 </motion.p>
 
                 {/* CTA */}
